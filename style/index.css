@@ -65,7 +65,6 @@ body {
     margin-top: 8%;
 
     h1, h2 {
-        font-size: 5em;
         margin: 0;
     }
 
@@ -75,7 +74,6 @@ body {
 
     .enter-button {
         margin-top: 1em;
-        font-size: 2em;
     }
 }
 
@@ -130,4 +128,105 @@ body {
 
 .redirect-arrow {
     font-size: 1.5rem;
+}
+
+
+/* Phones (640px max) */
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 1em 1em;
+    }
+
+    .title-container {
+
+        h1, h2 {
+            font-size: 2.5em;
+        }
+
+        h1 {
+            margin-top: 3em;
+        }
+
+        .enter-button {
+            font-size: 2em;
+        }
+    }
+
+    .svg-footer {
+        visibility: hidden;
+    }
+}
+
+/* Tablets (768px and up) */
+@media only screen and (min-width: 601px) {
+    .container {
+        margin: 2.5em 2.5em;
+    }
+
+    .title-container {
+
+        h1, h2 {
+            font-size: 3em;
+        }
+
+        .enter-button {
+            font-size: 2em;
+        }
+    }
+
+    .svg-footer {
+        visibility: hidden;
+    }
+}
+
+/* Computers (1100px and up) */
+@media only screen and (min-width: 1100px) {
+    .container {
+        margin: 2.5em 5em;
+    }
+
+    .title-container {
+        h1, h2 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        h2 {
+            margin-left: 2rem;
+        }
+
+        .enter-button {
+            font-size: 2em;
+        }
+    }
+
+    .svg-footer {
+        visibility: visible;
+    }
+}
+
+/* Giga big edition (1400px and up) */
+@media only screen and (min-width: 1400px) {
+    .container {
+        margin: 2.5em 8em;
+    }
+
+    .svg-footer {
+        visibility: visible;
+    }
+
+    .title-container {
+        h1, h2 {
+            font-size: 5em;
+            margin: 0;
+        }
+
+        h2 {
+            margin-left: 2rem;
+        }
+
+        .enter-button {
+            font-size: 2em;
+        }
+    }
 }
