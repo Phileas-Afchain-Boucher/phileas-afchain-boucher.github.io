@@ -4,7 +4,7 @@
         "content": [
             {
                 "name": "PlanetCorp",
-                "description": "Un jeu dans lequel vous incarnez un astronaute qui doit miner pour survivre. Ce jeu a été réalisé dans le cadre d'un projet en cours à l'université de Turku, Finlande. Le jeu a été réalisé en Godot avec GDscript dans une équipe de Finlandais, Turques, Coréens et Français. Dans ce projet, j'ai développé une grande partie des systèmes principaux (gestion des scenes et de l'audio), puis ai développé ce qui était nécessaire pour l'avancement du projet.",
+                "description": "Un jeu dans lequel vous incarnez un astronaute qui doit miner pour survivre. Ce jeu a été réalisé dans le cadre d'un projet en cours à l'université de Turku, Finlande. Le jeu a été réalisé en Godot avec GDscript dans une équipe de Finlandais, Turques, Coréens et Français. Dans ce projet, j'ai développé une grande partie des systèmes principaux (gestion des scenes et de l'audio), puis ai développé ce qui était nécessaire pour l'avancement du projet (fonctionnalités, gameplay, bugs, petits outils, ...).",
                 "image": "images/planetcorp.png",
                 "link": "https://pcgd7.itch.io/planetcorp"
             },
@@ -16,7 +16,7 @@
             },
             {
                 "name": "SonicSnails",
-                "description": "",
+                "description": "Un jeu dans lequel vous incarnez un escargot qui doit aller le plus vite ! Ce jeu a été réalisé lors de la \" Game Jam\" à L'EESI, dans une équipe de développeurs et d'artistes. Dans ce projet, j'ai participé au développement des mécaniques de jeu, développé un outil de changement de scènes et ai travaillé sur l'interface utilisateur, notamment le menu des statistiques.",
                 "image": "images/SonicSnail.png",
                 "link": "https://phiieas.itch.io/sonic-snail"
             }
