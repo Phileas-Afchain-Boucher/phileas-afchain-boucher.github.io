@@ -34,10 +34,12 @@ function populatePortfolio(projects) {
                 let newProjectDiv = document.createElement('div');
                 newProjectDiv.classList.add('portfolio-project');
 
-                let imgDiv= document.createElement('img');
-                imgDiv.src = projects[type_index].content[project_index].image;
-                imgDiv.alt = projects[type_index].content[project_index].name + " illustration";
-                newProjectDiv.appendChild(imgDiv);
+                if (projects[type_index].content[project_index].image) {
+                    let imgDiv = document.createElement('img');
+                    imgDiv.src = projects[type_index].content[project_index].image;
+                    imgDiv.alt = projects[type_index].content[project_index].name + " illustration";
+                    newProjectDiv.appendChild(imgDiv);
+                }
 
                 let projectInfoDiv = document.createElement('div');
                 projectInfoDiv.classList.add('project-infos');
@@ -51,6 +53,14 @@ function populatePortfolio(projects) {
 
                 projectInfoDiv.appendChild(projectNameDiv);
                 projectInfoDiv.appendChild(projectDescriptionDiv);
+
+                if (projects[type_index].content[project_index].link) {
+                    let projectLink = document.createElement('a');
+                    projectLink.href = projects[type_index].content[project_index].link;
+                    projectLink.target = '_blank';
+                    projectLink.appendChild(document.createTextNode("Lien vers le projet 🡥"));
+                    projectInfoDiv.appendChild(projectLink);
+                }
 
                 newProjectDiv.appendChild(projectInfoDiv);
 
