@@ -11,6 +11,41 @@
                 "name": "Bubble Penguin",
                 "description": "Un jeu dans lequel vous incarnez un pingouin qui doit récupérer une bulle ! Ce jeu a été réalisé lors de la Global Game Jam de 2025 à Turku, Finlande, dans une équipe composée de Français et de Coréens. Pour le développement de jeu, j'ai créé les musique et intégré des sons. Ensuite, j'ai développé les fonctionnalités manquantes et corrigé des bugs.",
                 "image": ""
+            },
+            {
+                "name": "SonicSnails",
+                "description": "",
+                "image": ""
+            },
+            {
+                "name": "Mycéblob",
+                "description": "",
+                "image": ""
+            },
+            {
+                "name": "Vitruvae",
+                "description": "",
+                "image": ""
+            }
+        ]
+    },
+    {
+        "type": "software",
+        "content": [
+            {
+                "name": "Application de l'algorithme de Kruskal",
+                "description": "",
+                "image": ""
+            },
+            {
+                "name": "Solveur de Sudoku",
+                "description": "",
+                "image": ""
+            },
+            {
+                "name": "Chess 2",
+                "description": "",
+                "image": ""
             }
         ]
     }

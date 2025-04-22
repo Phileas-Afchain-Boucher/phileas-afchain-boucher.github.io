@@ -1,3 +1,10 @@
+let globalProjectType = "video_game";
+
+function changeProjectType(projectType) {
+    globalProjectType = projectType;
+    addProjectsToPortfolio();
+}
+
 function addProjectsToPortfolio() {
     fetch("/projects.json")
         .then(response => response.json())
@@ -7,8 +14,14 @@ function addProjectsToPortfolio() {
 function populatePortfolio(projects) {
     let portfolioDiv = document.getElementById('portfolio-list');
 
+    // Removal of div's children
+    while(portfolioDiv.firstChild){
+        portfolioDiv.removeChild(portfolioDiv.firstChild);
+    }
+
     for (let type_index in projects) {
-        if (projects[type_index].type === "video_game")
+        // Search for the type
+        if (projects[type_index].type === globalProjectType)
         {
             for (let project_index in projects[type_index].content) {
                 let newProjectDiv = document.createElement('div');
