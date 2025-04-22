@@ -5,6 +5,13 @@ function changeProjectType(projectType) {
     addProjectsToPortfolio();
 }
 
+function loadProject() {
+    let params = new URL(document.location.toString()).searchParams;
+        globalProjectType = params.get('project_type') ? params.get('project_type') : "video_game";
+
+    addProjectsToPortfolio();
+}
+
 function addProjectsToPortfolio() {
     fetch("/projects.json")
         .then(response => response.json())
@@ -53,4 +60,4 @@ function populatePortfolio(projects) {
     }
 }
 
-window.onload = addProjectsToPortfolio;
+window.onload = loadProject;
