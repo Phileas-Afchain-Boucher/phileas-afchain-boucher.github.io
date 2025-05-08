@@ -90,6 +90,7 @@ footer svg {
     .project-infos {
         margin-left: 1em;
         line-height: 1.5em;
+        text-align: justify;
     }
 
     .project-name {
