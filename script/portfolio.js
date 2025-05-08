@@ -1,13 +1,15 @@
-let globalProjectType = "video_game";
+let globalProjectCategory = "video_game";
+let currentProjectCategory = "video_game";
 
-function changeProjectType(projectType) {
-    globalProjectType = projectType;
+function changeProjectType(projectCategory) {
+    currentProjectCategory = projectCategory;
     addProjectsToPortfolio();
 }
 
 function loadProject() {
     let params = new URL(document.location.toString()).searchParams;
-        globalProjectType = params.get('project_type') ? params.get('project_type') : "video_game";
+    globalProjectCategory = params.get('projectCategory') ? params.get('projectCategory') : "video_game";
+    currentProjectCategory = globalProjectCategory;
 
     addProjectsToPortfolio();
 }
@@ -26,9 +28,50 @@ function populatePortfolio(projects) {
         portfolioDiv.removeChild(portfolioDiv.firstChild);
     }
 
+    let projects_indexes = projects.categories[currentProjectCategory];
+
+    for (let i in projects_indexes) {
+        let project_index = projects_indexes[i];
+
+        let newProjectDiv = document.createElement('div');
+        newProjectDiv.classList.add('portfolio-project');
+
+        if (projects.projects[project_index].image) {
+            let imgDiv = document.createElement('img');
+            imgDiv.src = projects.projects[project_index].image;
+            imgDiv.alt = projects.projects[project_index].name + " illustration";
+            newProjectDiv.appendChild(imgDiv);
+        }
+
+        let projectInfoDiv = document.createElement('div');
+        projectInfoDiv.classList.add('project-infos');
+        let projectNameDiv = document.createElement('div');
+        projectNameDiv.classList.add('project-name');
+        let projectDescriptionDiv = document.createElement('div');
+        projectDescriptionDiv.classList.add('project-description');
+
+        projectNameDiv.appendChild(document.createTextNode(projects.projects[project_index].name));
+        projectDescriptionDiv.appendChild(document.createTextNode(projects.projects[project_index].description));
+
+        projectInfoDiv.appendChild(projectNameDiv);
+        projectInfoDiv.appendChild(projectDescriptionDiv);
+
+        if (projects.projects[project_index].link) {
+            let projectLink = document.createElement('a');
+            projectLink.href = projects.projects[project_index].link;
+            projectLink.target = '_blank';
+            projectLink.appendChild(document.createTextNode("Lien vers le projet 🡥"));
+            projectInfoDiv.appendChild(projectLink);
+        }
+
+        newProjectDiv.appendChild(projectInfoDiv);
+
+        portfolioDiv.appendChild(newProjectDiv);
+    }
+/*
     for (let type_index in projects) {
         // Search for the type
-        if (projects[type_index].type === globalProjectType)
+        if (projects[type_index].type === currentProjectCategory)
         {
             for (let project_index in projects[type_index].content) {
                 let newProjectDiv = document.createElement('div');
@@ -67,7 +110,7 @@ function populatePortfolio(projects) {
                 portfolioDiv.appendChild(newProjectDiv);
             }
         }
-    }
+    }*/
 }
 
 window.onload = loadProject;
