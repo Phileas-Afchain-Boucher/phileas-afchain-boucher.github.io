@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #e3e3e3;
+    /*background-color: #e3e3e3;*/
     font-family: 'ui-rounded', sans-serif;
     color: #232323;
 }
@@ -65,6 +65,15 @@ footer svg {
     gap: 1em;
 }
 
+.project-type-choice button {
+    border-radius: 0.8em;
+    border: #876baa solid 2px;
+    background-color: #ffffff;
+    color: #876baa;
+    font-weight: bold;
+    padding: 0.2em 0.4em;
+}
+
 .portfolio-project {
     display: flex;
 
@@ -73,10 +82,13 @@ footer svg {
         max-height: 20em;
         width: 20em;
         height: auto;
+        border-radius: 0.5em;
+        border: 3px solid #232323;
     }
 
     .project-infos {
         margin-left: 1em;
+        line-height: 1.5em;
     }
 
     .project-name {

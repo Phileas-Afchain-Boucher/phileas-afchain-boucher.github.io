@@ -22,11 +22,11 @@
         <!-- TODO: Les logos git, itch et linkedin en fixed -->
         <main>
             <div class="main-container">
-                <h1>Portfolio</h1>
-                <div class="project-type-choice">
-                    <button onclick="changeProjectType('video_game')">Jeu vidéo</button>
-                    <button onclick="changeProjectType('software')">Logiciel</button>
+                <h1>Bienvenue !</h1>
+                <div id="welcome-text">
+                    <p>dddddddddddddd</p>
                 </div>
+                <h1>Portfolio</h1>
                 <div id="portfolio-list">
                     <div class="portfolio-project">
                         <img src="images/planetcorp.png" alt=""/>
@@ -35,6 +35,11 @@
                             <p class="project-description">Un jeu dans lequel vous incarnez un astronaute qui doit miner pour survivre. Ce jeu a été réalisé dans le cadre d'un projet en cours à l'université de Turku, Finlande. Le jeu a été réalisé en Godot avec GDscript dans une équipe de Finlandais, Turques, Coréens et Français. Dans ce projet, j'ai développé une grande partie des systèmes principaux (gestion des scenes et de l'audio), puis ai développé ce qui était nécessaire pour l'avancement du projet.</p>
                         </div>
                     </div>
+                </div>
+                <div class="project-type-choice">
+                    <span>Fin des projets ! En voir plus : </span>
+                    <button onclick="changeProjectType('video_game')">Jeu vidéo</button>
+                    <button onclick="changeProjectType('software')">Logiciel</button>
                 </div>
             </div>
         </main>
