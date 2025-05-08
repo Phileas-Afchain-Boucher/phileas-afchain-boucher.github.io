@@ -76,6 +76,7 @@ footer svg {
 
 .portfolio-project {
     display: flex;
+    margin-bottom: 1em;
 
     img {
         max-width: 20em;
@@ -93,6 +94,7 @@ footer svg {
 
     .project-name {
         font-weight: bold;
+        font-size: 1.1em;
     }
 }
 
