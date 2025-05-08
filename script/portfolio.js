@@ -8,7 +8,7 @@ function changeProjectType(projectCategory) {
 
 function loadProject() {
     let params = new URL(document.location.toString()).searchParams;
-    globalProjectCategory = params.get('projectCategory') ? params.get('projectCategory') : "video_game";
+    globalProjectCategory = params.get('project-category') ? params.get('project-category') : "video_game";
     currentProjectCategory = globalProjectCategory;
 
     addProjectsToPortfolio();
